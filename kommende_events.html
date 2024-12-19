@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forside</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Kommende Events</title>
+    <link rel="stylesheet" href="kommende_events.css">
 </head>
 <body>
     <header>
@@ -18,7 +18,7 @@
                 <button onclick="window.location.href='index.html'">Forside</button>
             </div>
             <div>
-                <button>Events</button> <!-- Ingen `onclick` her -->
+                <button>Events</button>
                 <ul class="submenu">
                     <li><a href="kommende_events.html">Kommende events</a></li>
                     <li><a href="#">Tidligere events</a></li>
@@ -31,8 +31,6 @@
                     <li><a href="#">Donationer</a></li>
                     <li><a href="#">Bliv medlem</a></li>
                     <li><a href="#">Sponsorer</a></li>
-                    <li><a href="#">Frivillighed</a></li>
-                    <li><a href="#">Din støtte i aktion</a></li>
                 </ul>
             </div>
             <div>
@@ -40,27 +38,32 @@
                 <ul class="submenu">
                     <li><a href="#">Brugeroplevelser</a></li>
                     <li><a href="#">Bag kulisserne</a></li>
-                    <li><a href="#">Musikanbefalinger</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    
-
-    <section class="hero" style="background-image: url('billeder/forside_billede.jpg'); background-size: cover; background-position: center; height: 100vh;">
-        <h1>Velkommen til Radar</h1>
-        <p>Spillested, samlingspunkt & fællesskab</p>
-        <button onclick="window.location.href='kommende_events.html'">Kommende events</button>
+    <section class="hero" style="background-image: url('billeder/kommende_events_billede.png'); background-size: cover; background-position: center; height: 100vh;">
+        <h1>Kommende events</h1>
+        <p>Koncerter du sent vil glemme hos Radar!</p>
     </section>
-
-    <section class="content">
-        <div class="card">
-            <h2>Vind eksklusive præmier!</h2>
-            <button onclick="window.location.href='stoet.html'">Læs mere her!</button>
+    <section class="events">
+        <div class="event">
+            <img src="billeder/anna_roemer.jpg" alt="Anna Roemer"> 
+            <h2>Anna Roemer</h2>
+            <p>12. Januar 2025 kl. 20:00</p>
+            <button>Køb billet</button>
         </div>
-        <div class="card">
-            <h2>Del dine oplevelser & minder</h2>
-            <button onclick="window.location.href='blog.html'">Læs mere her!</button>
+        <div class="event">
+            <img src="billeder/syl_omsorg.png" alt="SYL + Omsorg"> 
+            <h2>SYL + Omsorg</h2>
+            <p>15. Januar 2025 kl. 19:00</p>
+            <button>Køb billet</button>
+        </div>
+        <div class="event">
+            <img src="billeder/club_live.jpg" alt="Club Live #5"> 
+            <h2>Club Live #5</h2>
+            <p>20. Januar 2025 kl. 21:00</p>
+            <button>Køb billet</button>
         </div>
     </section>
     

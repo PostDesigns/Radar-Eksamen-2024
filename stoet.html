@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Støt</title>
+    <link rel="stylesheet" href="stoet.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="billeder/logo_1.png" alt="Radar Logo" style="height: 50px;">
+            </a>
+        </div>
+        <nav class="menu">
+            <div>
+                <button onclick="window.location.href='index.html'">Forside</button>
+            </div>
+            <div>
+                <button>Events</button>
+                <ul class="submenu">
+                    <li><a href="kommende_events.html">Kommende events</a></li>
+                    <li><a href="#">Tidligere events</a></li>
+                    <li><a href="#">Eventkategorier</a></li>
+                </ul>
+            </div>
+            <div>
+                <button onclick="window.location.href='stoet.html'">Støt</button>
+                <ul class="submenu">
+                    <li><a href="#">Donationer</a></li>
+                    <li><a href="#">Bliv medlem</a></li>
+                    <li><a href="#">Sponsorer</a></li>
+                </ul>
+            </div>
+            <div>
+                <button onclick="window.location.href='blog.html'">Blog</button>
+                <ul class="submenu">
+                    <li><a href="#">Brugeroplevelser</a></li>
+                    <li><a href="#">Bag kulisserne</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+      
+    <section class="hero" style="background-image: url('billeder/stoet_radar.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <h1>Støt Radar</h1>
+        <p>Støt nu og vind eksklusive præmier!</p>
+        <p>34% støttet!</p>
+    </section>
+
+    <section class="support-options">
+        <div class="option">
+            <h2>Donation</h2>
+            <p>Støt Radar og deltag i konkurrencen om vilde præmier.</p>
+            <button>Støt nu</button>
+        </div>
+        <div class="option">
+            <h2>Bliv medlem</h2>
+            <p>Bliv en del af fællesskabet og få adgang til eksklusive fordele.</p>
+            <button>Tilmeld dig</button>
+        </div>
+        <div class="option">
+            <h2>Frivillig</h2>
+            <p>Bidrag med din tid og energi som frivillig hos Radar.</p>
+            <button>Læs mere</button>
+        </div>
+    </section>
+</body>
+</html>

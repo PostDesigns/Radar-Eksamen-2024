@@ -1,0 +1,222 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo button {
+    background: #5FD11F;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    position: relative;
+}
+
+nav div {
+    position: relative; /* Sikrer, at undermenuen er relativ til hvert menupunkt */
+}
+
+nav button {
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 10px 20px;
+}
+
+nav button:hover {
+    background: #5FD11F;
+    color: white;
+    border-radius: 5px;
+}
+
+nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+nav div:hover .submenu {
+    display: block; /* Vis kun undermenuen for den aktuelle knap */
+}
+
+nav .submenu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav .submenu a:hover {
+    background-color: #5FD11F;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 80px 20px 50px; /* Mindre højde for baggrundsbilledet */
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Mørkt overlay */
+    z-index: 0;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Større font size */
+    margin-bottom: 20px; /* Rykket længere ned */
+    color: white;
+    z-index: 2;
+    position: relative;
+    margin-top: 50px;
+}
+
+.hero p {
+    font-size: 1.7rem;
+    margin-bottom: 30px; /* Justeret afstand til events */
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.hero .experience-button {
+    background: #5FD11F;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Blog section */
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 2;
+    margin-top: -600px; /* Flytter op på baggrundsbilledet */
+}
+
+.blog h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-top: 110px;
+}
+
+.blog-post {
+    background-color: #333333;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 22%; /* Fire ved siden af hinanden */
+    min-width: 250px;
+    min-height: 400px; /* Øger højden på boksene */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: auto; /* Skaber plads til billedet øverst */
+}
+
+.blog-post h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.blog-post button {
+    background: #5FD11F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+    .blog-post {
+        width: 100%; /* Én pr. række */
+    }
+}

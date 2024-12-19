@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="billeder/logo_1.png" alt="Radar Logo" style="height: 50px;">
+            </a>
+        </div>
+        <nav class="menu">
+            <div>
+                <button onclick="window.location.href='index.html'">Forside</button>
+            </div>
+            <div>
+                <button>Events</button> <!-- Ingen `onclick` her -->
+                <ul class="submenu">
+                    <li><a href="kommende_events.html">Kommende events</a></li>
+                    <li><a href="#">Tidligere events</a></li>
+                    <li><a href="#">Eventkategorier</a></li>
+                </ul>
+            </div>
+            <div>
+                <button onclick="window.location.href='stoet.html'">Støt</button>
+                <ul class="submenu">
+                    <li><a href="#">Donationer</a></li>
+                    <li><a href="#">Bliv medlem</a></li>
+                    <li><a href="#">Sponsorer</a></li>
+                    <li><a href="#">Frivillighed</a></li>
+                    <li><a href="#">Din støtte i aktion</a></li>
+                </ul>
+            </div>
+            <div>
+                <button onclick="window.location.href='blog.html'">Blog</button>
+                <ul class="submenu">
+                    <li><a href="#">Brugeroplevelser</a></li>
+                    <li><a href="#">Bag kulisserne</a></li>
+                    <li><a href="#">Musikanbefalinger</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" style="background-image: url('billeder/blog_baggrund.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <h1>Del dine øjeblikke fra Radar her!</h1>
+        <button class="experience-button">Del oplevelse</button>
+    </section>
+    
+    <section class="blog">
+        <div class="blog-posts">
+            <div class="blog-post">
+                <img src="billeder/blog1.jpg" alt="Blog 1">
+                <h2>Ny musikgenre?</h2>
+                <p>Asger tog på Radar for at...</p>
+                <button>Læs mere</button>
+            </div>
+            <div class="blog-post">
+                <img src="billeder/blog2.jpg" alt="Blog 2">
+                <h2>Fællesskab i stor stil</h2>
+                <p>Radar er altid med til at...</p>
+                <button>Læs mere</button>
+            </div>
+            <div class="blog-post">
+                <img src="billeder/blog3.jpg" alt="Blog 3">
+                <h2>Kulturbærende spillested</h2>
+                <p>En yderst speciel perle der...</p>
+                <button>Læs mere</button>
+            </div>
+            <div class="blog-post">
+                <img src="billeder/blog4.jpg" alt="Blog 4">
+                <h2>Altid god stemning!</h2>
+                <p>Man kan ikke andet end at...</p>
+                <button>Læs mere</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>    

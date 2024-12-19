@@ -1,0 +1,214 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo button {
+    background: #5FD11F;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    position: relative;
+}
+
+nav div {
+    position: relative; /* Sikrer, at undermenuen er relativ til hvert menupunkt */
+}
+
+nav button {
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 10px 20px;
+}
+
+nav button:hover {
+    background: #5FD11F;
+    color: white;
+    border-radius: 5px;
+}
+
+nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+nav div:hover .submenu {
+    display: block; /* Vis kun undermenuen for den aktuelle knap */
+}
+
+nav .submenu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav .submenu a:hover {
+    background-color: #5FD11F;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 80px 20px 50px; /* Mindre højde for baggrundsbilledet */
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Mørkt overlay */
+    z-index: 0;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Større font size */
+    margin-bottom: 20px; /* Rykket længere ned */
+    color: white;
+    z-index: 2;
+    position: relative;
+    margin-top: 50px; 
+}
+
+.hero p {
+    font-size: 1.7rem;
+    margin-bottom: 30px; /* Justeret afstand til events */
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+/* Events section */
+.events {
+    z-index: 2;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.events .event {
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    min-height: 300px; /* Øger højden på boksene */
+    justify-content: flex-end; /* Flytter indholdet længere ned */
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    min-height: 300px; /* Øger højden på boksene */
+}
+
+.events .event img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Tilføjer plads til billedet */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.events .event h2 {
+    font-size: 1.1rem; /* Mindre størrelse for h2 */
+    margin-bottom: 10px;
+}
+
+.events .event button {
+    background: #5FD11F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Mindre tekststørrelse */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Mindre skriftstørrelse */
+    }
+
+    .events {
+        flex-direction: column; /* Stablet layout */
+        top: 70%;
+    }
+
+    .events .event {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
